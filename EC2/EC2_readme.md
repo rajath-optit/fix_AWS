@@ -29,7 +29,8 @@ This script helps in automating compliance checks and remediations for various E
    ```bash
    bash compliance_remediation.sh
 
-#Example Output
+#Example Output:
+
 The script processes each control based on the status from the CSV and logs actions taken. If no automated fix is available, it recommends a manual review.
 
 ```

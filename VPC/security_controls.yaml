@@ -1,0 +1,84 @@
+security_controls:
+  - title: "VPC Peering Connections: Ensure VPC peering connections have appropriate routing rules"
+    remediation_function: "fix_vpc_peering_connection_routing_rules"
+    description: "Ensure VPC peering connections have appropriate routing rules, restricting access based on specific needs."
+
+  - title: "Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389"
+    remediation_function: "restrict_sg_ingress_rdp"
+    description: "Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389, a potential attack vector for remote desktop protocol (RDP)."
+
+  - title: "VPC Security Groups should restrict ingress from 0.0.0.0/0 or ::/0 to Cassandra ports 7199 or 9160 or 8888"
+    remediation_function: "restrict_sg_ingress_cassandra"
+    description: "Restrict insecure ports used by Cassandra to only authorized IPs for better security."
+
+  - title: "Ensure EC2 instances are launched in a private subnet"
+    remediation_function: "ensure_ec2_in_private_subnet"
+    description: "Ensure that all EC2 instances are launched in a private subnet to limit internet exposure."
+
+  - title: "Ensure EC2 instances are associated with appropriate IAM roles"
+    remediation_function: "ensure_ec2_iam_role"
+    description: "Ensure that EC2 instances have appropriate IAM roles associated for minimal privilege."
+
+  - title: "Ensure that EBS volumes are encrypted"
+    remediation_function: "ensure_ebs_encryption"
+    description: "Ensure that all EBS volumes are encrypted to prevent unauthorized access to data at rest."
+
+  - title: "Ensure S3 buckets have no public access"
+    remediation_function: "restrict_s3_public_access"
+    description: "Ensure that S3 buckets do not have public access, preventing exposure of sensitive data."
+
+  - title: "Ensure security groups do not allow ingress from 0.0.0.0/0 to port 22"
+    remediation_function: "restrict_sg_ingress_ssh"
+    description: "Ensure no security groups allow ingress from 0.0.0.0/0 to port 22, which can be a potential attack vector for SSH brute force attacks."
+
+  - title: "Ensure that RDS instances are encrypted"
+    remediation_function: "ensure_rds_encryption"
+    description: "Ensure that all RDS instances are encrypted to protect data at rest."
+
+  - title: "Ensure ELB listeners are using SSL (HTTPS) for encrypted traffic"
+    remediation_function: "ensure_elb_ssl_listeners"
+    description: "Ensure that Elastic Load Balancer (ELB) listeners are configured to use SSL (HTTPS) for encrypted traffic."
+
+  - title: "Ensure that Lambda functions have appropriate execution roles"
+    remediation_function: "ensure_lambda_execution_role"
+    description: "Ensure that AWS Lambda functions are associated with an IAM execution role that follows the principle of least privilege."
+
+  - title: "Ensure that IAM users have MFA enabled"
+    remediation_function: "ensure_iam_user_mfa"
+    description: "Ensure that all IAM users have multi-factor authentication (MFA) enabled for added security."
+
+  - title: "Ensure no security groups allow ingress from 0.0.0.0/0 to port 27017 (MongoDB)"
+    remediation_function: "restrict_sg_ingress_mongo"
+    description: "Ensure no security groups allow ingress from 0.0.0.0/0 to port 27017, preventing unauthorized access to MongoDB."
+
+  - title: "Ensure EFS file systems are encrypted"
+    remediation_function: "ensure_efs_encryption"
+    description: "Ensure that EFS (Elastic File System) file systems are encrypted to secure data at rest."
+
+  - title: "Ensure RDS security groups allow access only from specific IP ranges"
+    remediation_function: "restrict_rds_sg_ingress"
+    description: "Ensure that RDS security groups only allow access from specific IP ranges to reduce exposure."
+
+  - title: "Ensure CloudTrail is enabled in all regions"
+    remediation_function: "ensure_cloudtrail_enabled"
+    description: "Ensure that CloudTrail is enabled in all AWS regions for auditing and logging purposes."
+
+  - title: "Ensure VPC flow logs are enabled"
+    remediation_function: "ensure_vpc_flow_logs_enabled"
+    description: "Ensure that VPC flow logs are enabled for network monitoring and security auditing."
+
+  - title: "Ensure that EC2 instances have a valid backup plan"
+    remediation_function: "ensure_ec2_backup"
+    description: "Ensure that all EC2 instances are backed up regularly using Amazon Data Lifecycle Manager (DLM) or other backup solutions."
+
+  - title: "Ensure CloudWatch Alarms are set for critical EC2 instances"
+    remediation_function: "ensure_cloudwatch_alarms"
+    description: "Ensure that CloudWatch alarms are set up for critical EC2 instances to monitor for performance and security issues."
+
+  - title: "Ensure no EC2 instances have public IPs"
+    remediation_function: "disable_public_ips"
+    description: "Ensure that no EC2 instances are launched with public IPs to reduce exposure to the internet."
+
+  - title: "Ensure ELB has health checks configured for all target groups"
+    remediation_function: "ensure_elb_health_checks"
+    description: "Ensure that Elastic Load Balancers (ELB) have health checks configured for all target groups to ensure availability."

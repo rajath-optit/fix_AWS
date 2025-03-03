@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Log file to record actions taken
-LOG_FILE="remediation_log.txt"
+LOG_FILE="remediation_log_EBS.txt"
 
 # Function to log messages with timestamp
 log_message() {

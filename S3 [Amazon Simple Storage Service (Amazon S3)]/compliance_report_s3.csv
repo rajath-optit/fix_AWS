@@ -1,0 +1,17 @@
+"S3 Public Access Should Be Blocked at Account Level",alarm
+"S3 Bucket Default Encryption Should Be Enabled with KMS",compliant
+"S3 Bucket Logging Should Be Enabled",alarm
+"S3 Bucket Versioning Should Be Enabled",compliant
+"S3 Buckets Object Logging Should Be Enabled",alarm
+"S3 Buckets Should Prohibit Public Read Access",alarm
+"S3 Buckets Access Control Lists (ACLs) Should Not Be Used to Manage User Access to Buckets",compliant
+"S3 Bucket Policy Should Prohibit Public Access",alarm
+"S3 Access Points Should Have Block Public Access Settings Enabled",compliant
+"S3 Buckets Should Have Lifecycle Policies Configured",alarm
+"S3 Buckets Should Prohibit Public Write Access",alarm
+"S3 Bucket ACLs Should Not Be Accessible to All Authenticated Users",compliant
+"S3 Buckets Static Website Hosting Should Be Disabled",compliant
+"S3 Bucket Cross-Region Replication Should Be Enabled",alarm
+"S3 Buckets Should Enforce SSL",compliant
+"S3 MFA Delete Should Be Enabled on S3 Buckets",alarm
+"S3 Bucket Object Lock Should Be Enabled",compliant

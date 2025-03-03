@@ -1,0 +1,5 @@
+sg-06accaf4ccc4165b6,Restrict MongoDB Port,alarm
+sg-027a5fe3890f316e9,Restrict Oracle Port,alarm
+-,Ensure AMI Encryption,alarm
+-,Ensure Instances in VPC,compliant
+-,Disable Public IPs,alarm

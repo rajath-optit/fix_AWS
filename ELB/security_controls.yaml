@@ -1,0 +1,80 @@
+controls:
+  - title: "ELB classic load balancers should be configured with defensive or strictest desync mitigation mode"
+    description: "Ensures ELB classic load balancers have strict desync mitigation mode enabled."
+    remediation_function: "enable_strict_desync_mitigation"
+  
+  - title: "ELB application load balancers should have at least one outbound rule"
+    description: "Ensures that ELB application load balancers have outbound rules configured."
+    remediation_function: "add_outbound_rule"
+
+  - title: "ELB application load balancers should use AWS Web Application Firewall (WAF) rules for traffic filtering"
+    description: "Ensures that ELB application load balancers have WAF rules enabled for traffic filtering."
+    remediation_function: "enable_waf"
+
+  - title: "ELB application load balancers should redirect HTTP requests to HTTPS"
+    description: "Ensures that ELB application load balancers are configured to redirect HTTP requests to HTTPS."
+    remediation_function: "enable_http_to_https_redirect"
+
+  - title: "ELB classic load balancers should only use SSL or HTTPS listeners"
+    description: "Ensures that ELB classic load balancers only use SSL or HTTPS listeners."
+    remediation_function: "configure_ssl_listeners"
+
+  - title: "ELB application load balancers should be deployed in private subnets"
+    description: "Ensures that ELB application load balancers are deployed in private subnets for improved security."
+    remediation_function: "deploy_in_private_subnet"
+
+  - title: "ELB should use Security Groups that restrict traffic to trusted sources"
+    description: "Ensures that ELBs are using security groups to restrict inbound and outbound traffic to trusted sources."
+    remediation_function: "configure_security_groups"
+
+  - title: "ELB should enable logging and store logs in an S3 bucket"
+    description: "Ensures that ELB logging is enabled and logs are stored securely in an S3 bucket for auditing."
+    remediation_function: "enable_logging"
+
+  - title: "ELB should not have open access to the internet (no public IPs)"
+    description: "Ensures that ELBs are not assigned public IP addresses and are not exposed to the internet unnecessarily."
+    remediation_function: "disable_public_ips"
+
+  - title: "ELB application load balancers should use TLS with strong ciphers"
+    description: "Ensures that ALBs are configured to use TLS with strong cipher suites for secure communications."
+    remediation_function: "configure_tls_ciphers"
+
+  - title: "ELB should be integrated with AWS Shield for DDoS protection"
+    description: "Ensures that ELB is integrated with AWS Shield to provide protection against Distributed Denial of Service (DDoS) attacks."
+    remediation_function: "integrate_with_aws_shield"
+
+  - title: "ELB should be associated with AWS Certificate Manager (ACM) for SSL/TLS certificates"
+    description: "Ensures that SSL/TLS certificates are managed by AWS Certificate Manager (ACM) for secure connections."
+    remediation_function: "associate_acm_certificate"
+
+  - title: "ELB should use HTTP/2 for better performance and security"
+    description: "Ensures that ELB application load balancers are using HTTP/2 for better performance and security."
+    remediation_function: "enable_http2"
+
+  - title: "ELB application load balancers should use Amazon Cognito for user authentication"
+    description: "Ensures that ELB application load balancers are integrated with Amazon Cognito for user authentication."
+    remediation_function: "configure_cognito_authentication"
+
+  - title: "ELB should have cross-zone load balancing enabled"
+    description: "Ensures that ELB is configured to distribute traffic evenly across multiple availability zones."
+    remediation_function: "enable_cross_zone_load_balancing"
+
+  - title: "ELB should have connection draining enabled"
+    description: "Ensures that ELB is configured to drain connections before terminating instances."
+    remediation_function: "enable_connection_draining"
+
+  - title: "ELB should use listener rules for routing traffic based on URL paths"
+    description: "Ensures that ELB application load balancers use listener rules to route traffic based on URL paths for improved traffic management."
+    remediation_function: "configure_listener_rules"
+
+  - title: "ELB should be integrated with CloudWatch for monitoring and alerts"
+    description: "Ensures that ELB is integrated with CloudWatch to monitor traffic and generate alerts for unusual behavior."
+    remediation_function: "integrate_with_cloudwatch"
+
+  - title: "ELB application load balancers should have SSL offloading enabled"
+    description: "Ensures that SSL offloading is enabled on ALB to reduce the load on backend servers."
+    remediation_function: "enable_ssl_offloading"
+
+  - title: "ELB should use strong encryption for data at rest"
+    description: "Ensures that ELB configuration and log data are encrypted at rest."
+    remediation_function: "enable_data_encryption"

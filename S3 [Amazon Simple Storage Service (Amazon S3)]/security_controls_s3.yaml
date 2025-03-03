@@ -1,0 +1,68 @@
+S3SecurityControls:
+  - title: "S3 Public Access Should Be Blocked at Account Level"
+    remediation_function: "block_public_access_account_level"
+    description: "Automation: Can be enforced using a script to set the account-level block public access settings for all S3 buckets."
+
+  - title: "S3 Bucket Default Encryption Should Be Enabled with KMS"
+    remediation_function: "enable_s3_default_encryption"
+    description: "Automation: Can be fixed by scripting to enable default encryption with AWS KMS for all buckets."
+
+  - title: "S3 Bucket Logging Should Be Enabled"
+    remediation_function: "enable_bucket_logging"
+    description: "Automation: A script can be created to enable logging on all S3 buckets."
+
+  - title: "S3 Bucket Versioning Should Be Enabled"
+    remediation_function: "enable_versioning"
+    description: "Automation: Can be easily automated to enable versioning on all S3 buckets."
+
+  - title: "S3 Buckets Object Logging Should Be Enabled"
+    remediation_function: "enable_object_logging"
+    description: "Automation: Automation scripts can be set to ensure object-level logging is enabled on all S3 buckets."
+
+  - title: "S3 Buckets Should Prohibit Public Read Access"
+    remediation_function: "block_public_read_access"
+    description: "Automation: A script can enforce this policy by blocking public read access to S3 buckets."
+
+  - title: "S3 Buckets Access Control Lists (ACLs) Should Not Be Used to Manage User Access to Buckets"
+    remediation_function: "disable_acl_usage"
+    description: "Automation: Can be automated to remove or prohibit the use of ACLs for access control."
+
+  - title: "S3 Bucket Policy Should Prohibit Public Access"
+    remediation_function: "set_bucket_policy_deny_public"
+    description: "Automation: Scripts can be created to ensure that bucket policies deny public access."
+
+  - title: "S3 Access Points Should Have Block Public Access Settings Enabled"
+    remediation_function: "block_public_access_access_points"
+    description: "Automation: Can be checked and enforced via a script to block public access on all access points."
+
+  - title: "S3 Buckets Should Have Lifecycle Policies Configured"
+    remediation_function: "set_lifecycle_policies"
+    description: "Automation: A script can be created to enforce lifecycle management for buckets to automatically delete unnecessary or outdated files."
+
+  - title: "S3 Buckets Should Prohibit Public Write Access"
+    remediation_function: "block_public_write_access"
+    description: "Automation: A script can ensure that no S3 bucket allows public write access."
+
+  - title: "S3 Bucket ACLs Should Not Be Accessible to All Authenticated Users"
+    remediation_function: "restrict_acl_access"
+    description: "Automation: Can be automated to ensure that ACLs are not accessible to all authenticated users."
+
+  - title: "S3 Buckets Static Website Hosting Should Be Disabled"
+    remediation_function: "disable_static_website_hosting"
+    description: "Automation: Can be enforced using a script to disable static website hosting on S3 buckets."
+
+  - title: "S3 Bucket Cross-Region Replication Should Be Enabled"
+    remediation_function: "enable_cross_region_replication"
+    description: "Automation: A script can be created to check and enable cross-region replication for compliance."
+
+  - title: "S3 Buckets Should Enforce SSL"
+    remediation_function: "enforce_ssl_on_s3"
+    description: "Automation: A script can be used to enforce SSL on all S3 bucket endpoints."
+
+  - title: "S3 MFA Delete Should Be Enabled on S3 Buckets"
+    remediation_function: "enable_mfa_delete"
+    description: "Automation: Can be automated to enable MFA Delete to protect from accidental or malicious deletions."
+
+  - title: "S3 Bucket Object Lock Should Be Enabled"
+    remediation_function: "enable_object_lock"
+    description: "Automation: Can be scripted to enable object lock on all S3 buckets for immutability."

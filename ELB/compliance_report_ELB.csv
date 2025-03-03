@@ -1,0 +1,6 @@
+control_title,status
+"ELB classic load balancers should be configured with defensive or strictest desync mitigation mode",alarm
+"ELB application load balancers should have at least one outbound rule",compliant
+"ELB application load balancers should use AWS Web Application Firewall (WAF) rules for traffic filtering",alarm
+"ELB application load balancers should redirect HTTP requests to HTTPS",compliant
+"ELB classic load balancers should only use SSL or HTTPS listeners",alarm

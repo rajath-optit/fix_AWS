@@ -1,0 +1,51 @@
+name: Compliance Remediation Automation
+
+on:
+  push:
+    branches:
+      - main  # Adjust based on the branch you want to trigger the action for
+  pull_request:
+    branches:
+      - main  # Trigger on PRs targeting the 'main' branch
+
+jobs:
+  remediation:
+    runs-on: ubuntu-latest  # Using the latest Ubuntu runner
+
+    steps:
+      # Step 1: Check out the code from the repository
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up AWS CLI
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "us-east-1"  # Choose your AWS region
+
+      # Step 3: Install dependencies (yq, jq, and AWS CLI)
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+          curl -s https://raw.githubusercontent.com/mikefarah/yq/v4.13.2/install.sh | bash
+          sudo mv /usr/local/bin/yq /usr/bin/yq
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
+          rm awscliv2.zip
+
+      # Step 4: Run the compliance remediation script
+      - name: Run compliance remediation script
+        run: |
+          chmod +x ./compliance_remediation.sh # add more with proper file name pending
+          ./compliance_remediation.sh
+
+      # Optional: Upload logs as artifacts
+      - name: Upload remediation logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: remediation-logs
+          path: remediation_log.txt

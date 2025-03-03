@@ -1,0 +1,7 @@
+Control Title, Status
+EKS Clusters Endpoint Should Restrict Public Access, alarm
+EKS Clusters Should Enable Encryption at Rest for etcd, alarm
+EKS Clusters Should Have Control Plane Audit Logging Enabled, alarm
+EKS Clusters Should Restrict the Use of Outdated or Unsupported Kubernetes Versions, compliant
+EKS Clusters Should Use IAM Roles for Service Accounts (IRSA) for Fine-Grained Access Control, alarm
+# Add other controls...

@@ -1,0 +1,85 @@
+controls:
+  - title: "EKS Clusters Endpoint Should Restrict Public Access"
+    remediation_function: restrict_public_access
+    description: "Ensures that the EKS cluster endpoint is not publicly accessible."
+
+  - title: "EKS Clusters Should Enable Encryption at Rest for etcd"
+    remediation_function: enable_etcd_encryption
+    description: "Ensures that encryption at rest is enabled for etcd."
+
+  - title: "EKS Clusters Should Have Control Plane Audit Logging Enabled"
+    remediation_function: enable_audit_logging
+    description: "Enables Kubernetes control plane audit logging."
+
+  - title: "EKS Clusters Should Restrict the Use of Outdated or Unsupported Kubernetes Versions"
+    remediation_function: restrict_outdated_versions
+    description: "Ensures that only supported Kubernetes versions are used."
+
+  - title: "EKS Clusters Should Use IAM Roles for Service Accounts (IRSA) for Fine-Grained Access Control"
+    remediation_function: enable_irsa
+    description: "Enforces the use of IAM roles for service accounts."
+
+  - title: "EKS Clusters Should Not Use Multiple Security Groups"
+    remediation_function: restrict_security_groups
+    description: "Ensures that the EKS cluster uses a single security group."
+
+  - title: "EKS Clusters Should Use Amazon ECR for Container Image Storage and Scanning for Vulnerabilities"
+    remediation_function: configure_ecr_storage
+    description: "Enforces the use of Amazon ECR for container image storage and vulnerability scanning."
+
+  - title: "EKS Clusters Should Restrict Use of Privileged Containers"
+    remediation_function: restrict_privileged_containers
+    description: "Ensures that privileged containers are not used."
+
+  - title: "EKS Clusters Should Enable Logging for Kubernetes Audit Events"
+    remediation_function: enable_k8s_audit_logging
+    description: "Enables logging for Kubernetes audit events."
+
+  - title: "EKS Clusters Should Enforce the Use of Security Contexts for Containers"
+    remediation_function: enforce_security_contexts
+    description: "Enforces the use of security contexts for containers."
+
+  - title: "EKS Clusters Should Enable Integration with Amazon GuardDuty to Detect Security Threats"
+    remediation_function: enable_guardduty_integration
+    description: "Ensures that GuardDuty integration is enabled for EKS clusters."
+
+  - title: "EKS Clusters Should Enable Amazon CloudWatch Monitoring and Alarms for Containerized Applications"
+    remediation_function: enable_cloudwatch_alarms
+    description: "Enables CloudWatch monitoring and alarms for containerized applications."
+
+  - title: "EKS Clusters Should Restrict Inbound Traffic to Only Necessary Services and Ports"
+    remediation_function: restrict_inbound_traffic
+    description: "Ensures that inbound traffic to the EKS cluster is restricted to only necessary services and ports."
+
+  - title: "EKS Clusters Should Ensure All EC2 Instances in the Cluster Are Running the Latest Security Patches"
+    remediation_function: ensure_ec2_patches
+    description: "Ensures that EC2 instances in the EKS cluster are up-to-date with the latest security patches."
+
+  - title: "EKS Clusters Should Use Security Groups for Pods to Isolate Workloads"
+    remediation_function: configure_pod_security_groups
+    description: "Enforces the use of security groups for pods to isolate workloads."
+
+  - title: "EKS Clusters Should Use Managed Node Groups Rather Than Unmanaged Node Groups"
+    remediation_function: use_managed_node_groups
+    description: "Ensures that managed node groups are used instead of unmanaged node groups."
+
+  - title: "EKS Clusters Should Implement Network Segmentation Using VPCs and Subnets"
+    remediation_function: configure_network_segmentation
+    description: "Enforces proper network segmentation using VPCs and subnets."
+
+  - title: "EKS Clusters Should Not Be Configured Within a Default VPC"
+    remediation_function: ensure_non_default_vpc
+    description: "Ensures that EKS clusters are not configured within the default VPC."
+
+  - title: "EKS Clusters Should Have Proper Role-Based Access Control (RBAC) Configurations"
+    remediation_function: configure_rbac
+    description: "Ensures that proper RBAC configurations are in place for EKS clusters."
+
+  - title: "EKS Clusters Should Not Allow Unrestricted Access to Kubernetes Dashboards"
+    remediation_function: restrict_k8s_dashboard_access
+    description: "Ensures that Kubernetes dashboard access is not unrestricted."
+
+  - title: "EKS Clusters Should Implement Pod Security Policies (PSP) or OPA-Gatekeeper for Enforcing Security Policies"
+    remediation_function: configure_psp_opa
+    description: "Enforces the use of Pod Security Policies or OPA-Gatekeeper to enforce security policies."
+

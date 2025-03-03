@@ -1,0 +1,5 @@
+control_title,status
+EC2 stopped instances should be removed in 30 days,alarm
+EC2 instances should be in a VPC,compliant
+AWS EC2 launch templates should not assign public IPs to network interfaces,alarm
+Ensure Images (AMI's) are encrypted,alarm
